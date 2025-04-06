@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here’s a clean and professional `README.md` for your **Expo + Firebase FCM Push Notifications** repo:
 
-## Getting Started
+---
 
-First, run the development server:
+### 📄 `README.md`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```markdown
+# 🚀 Necxis Expo App - Firebase FCM Push Notifications
+
+This is a React Native mobile application built using **Expo** that integrates **Firebase Cloud Messaging (FCM)** to handle **push notifications**. The app is part of the Necxis Internship Assignment.
+
+---
+
+## 📱 Features
+
+- 🔔 Push notifications using Expo + Firebase Cloud Messaging
+- 📲 Retrieves and logs Expo Push Token
+- 📤 Ready to integrate with any backend (e.g., Next.js)
+- ⚡ Uses modern Expo SDK and supports Android devices
+
+---
+
+## 📁 Folder Structure
+
+```
+necxis-app/
+│
+├── App.js                        # Root component for lifecycle & notification listeners
+├── fcm.js                        # Push notification logic (permissions, token)
+├── firebase.js                   # Firebase config file (if using Firebase)
+├── components/
+│   └── NotificationHandler.js    # (Optional) Background notification component
+├── assets/
+├── package.json
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🔧 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/your-username/necxis-app.git
+cd necxis-app
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npx expo install expo-notifications
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔌 Firebase Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a project or use an existing one
+3. Go to **Project Settings > General > Your Apps**
+4. Register your Android app (package name like `com.yourcompany.necxis`)
+5. Download `google-services.json` (optional)
+6. Go to **Cloud Messaging**, and copy your **Sender ID** and **Server Key**
+7. Use your Firebase config inside `firebase.js`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📲 Run the App
+
+```bash
+npx expo start
+```
+
+> 💡 Make sure to run on a physical Android device to test push notifications.
+
+---
+
+## 🚀 Sending a Test Notification
+
+Use [Expo's Push Notification Tool](https://expo.dev/notifications) to send a push notification.
+
+1. Copy the **Expo Push Token** from console log.
+2. Paste it in the Expo notification tool.
+3. Send a test notification!
+
+---
+
+## ✅ Requirements
+
+- Expo SDK 50 or higher
+- Physical Android device
+- Firebase Project with FCM enabled
+
+---
+
+## 🧠 Credits
+
+- Built with 💙 using **React Native**, **Expo**, and **Firebase**
+- Created for the **Necxis Internship Assignment**
+
+---
+
+## 📩 License
+
+This project is licensed under the MIT License.
+```
+
+---
+
+Let me know if you want to include screenshots, a demo GIF, or link it with your Next.js + Vercel backend!
